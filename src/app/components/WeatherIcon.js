@@ -1,5 +1,6 @@
 'use-client'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import {
     faBolt,
     faCloud,
@@ -8,22 +9,28 @@ import {
     faSun,
     faCloudRain,
     faRainbow,
+    
+    
 } from "@fortawesome/free-solid-svg-icons";
 
-const WeatherIcon = ({weatherType}) => {
+const WeatherIcon = ({weatherType, size}) => {
+
+    const iconSize = size || "lg";
+
+
     switch (weatherType){
         case "Clouds":
-            return <FontAwesomeIcon icon={faCloud} />
+            return <FontAwesomeIcon icon={faCloud} size={iconSize}/>
         case "Rain":
-            return <FontAwesomeIcon icon={faCloudRain} />
+            return <FontAwesomeIcon icon={faCloudRain} size={iconSize} />
         case "Clear":
-            return <FontAwesomeIcon icon={faRainbow} />
+            return <FontAwesomeIcon icon={faSun} size={iconSize} />
         case "Thunderstorm":
-            return <FontAwesomeIcon icon={faBolt} />
+            return <FontAwesomeIcon icon={faBolt} size={iconSize}/>
         case "Snow":
-            return <FontAwesomeIcon icon={faSnowflake} />
+            return <FontAwesomeIcon icon={faSnowflake} size={iconSize} />
         default:
-            return <FontAwesomeIcon icon={faCloud} />
+            return <FontAwesomeIcon icon={faCloud}  size={iconSize}/>
     } 
 };
 

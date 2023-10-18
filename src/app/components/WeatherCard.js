@@ -3,15 +3,42 @@ import styles from "./WeatherCard.module.css";
 import WeatherIcon from "./WeatherIcon";
 
 
-const WeatherCard =({cityName, currentTemperature, highTemperature, lowTemperature, weatherType, humidity, windspeed, cloudiness
-}) =>(
-    <div className={styles.weatherCardWrapper} style={{backgroundColor: `rgba(0,0,0,0.${cloudiness}`}}>
+const getBackgroundColor = (currentTemperature) => {
+    if (currentTemperature >= 80) {
+      return "hot";
+    } else if (currentTemperature >= 65) {
+      return "warm";
+    } else {
+      return "cold";
+    }
+  };
+
+
+const WeatherCard =({
+    cityName, 
+    currentTemperature, 
+    highTemperature, 
+    lowTemperature, 
+    weatherType, 
+    humidity, 
+    windspeed, 
+    cloudiness
+}) =>{
+
+    const backgroundColor = getBackgroundColor(currentTemperature);
+
+    
+    
+    
+    
+    return(
+    <div className={`${styles.weatherCardWrapper} ${styles[getBackgroundColor(currentTemperature)]}`}>
         <div className={styles.weatherCardImg}>
-            <WeatherIcon weatherType={weatherType}/>
+            <WeatherIcon weatherType={weatherType} size="10x"/>
         </div>
 
         <div className = {styles.WeatherCardWrapper}>
-            <h2>City Name: {cityName}</h2>
+            <h2> {cityName}</h2>
 
             <p>Weather Type: {weatherType}</p>
             <p>Current Temperature:{currentTemperature}</p>
@@ -25,6 +52,9 @@ const WeatherCard =({cityName, currentTemperature, highTemperature, lowTemperatu
 
 
     </div>
-)
+    );
 
-export default WeatherCard
+    
+};
+
+export default WeatherCard;

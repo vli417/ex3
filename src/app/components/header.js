@@ -1,18 +1,23 @@
-import Link from "next/Link";
+//"use client";
 
-const Header = () => {
+//import styles from "./WeatherCard.module.css";
+import Link from "next/link";
+
+const Header = () => (
+    
     <header>
         <nav>
-            <Link href="/Tokyo">Tokyo</Link>
+            <Link href="/Melbourne">Melbourne</Link>
             <Link href="/Boston">Boston</Link>
-            <Link href="/Paris">Paris</Link>
-            <Link href="/New York">Chicago</Link>
-            <Link href="/San Francisco">Chicago</Link>
+            <Link href="/Shanghai">Shanghai</Link>
+            <Link href="/New York">New York</Link>
+            <Link href="/San Francisco">San Francisco</Link>
             
             
         </nav>
     </header>
+    
 
-};
+);
 
 export default Header;

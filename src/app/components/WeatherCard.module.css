@@ -1,3 +1,42 @@
-.WeatherCardWrapper{
-    border-color: black;
-}
+.WeatherCardWrapper {
+    
+    
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    font-size:50px;
+    
+  }
+  
+  .WeatherCardWrapper h2 {
+    font-size: 40px;
+    
+    margin: 0;
+  }
+  
+  .WeatherCardWrapper p {
+    font-size: 30px;
+    
+    margin: 10px 0;
+  }
+
+  .weatherCardImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  .hot{
+    background-color:lightcoral;
+  }
+  
+  .warm{
+    background-color:lightsalmon;
+  }
+
+  .cold{
+    background-color:lightblue;
+  }
