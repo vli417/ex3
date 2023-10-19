@@ -1,6 +1,3 @@
-//"use client";
-
-//import styles from "./WeatherCard.module.css";
 import Link from "next/link";
 
 const Header = () => (

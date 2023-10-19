@@ -26,11 +26,6 @@ const WeatherCard =({
 }) =>{
 
     const backgroundColor = getBackgroundColor(currentTemperature);
-
-    
-    
-    
-    
     return(
     <div className={`${styles.weatherCardWrapper} ${styles[getBackgroundColor(currentTemperature)]}`}>
         <div className={styles.weatherCardImg}>
@@ -48,13 +43,8 @@ const WeatherCard =({
             <p>Humidity: {humidity}</p>
             <p>Wind speed:{windspeed}</p>
         </div>
-
-
-
     </div>
-    );
-
-    
+    );   
 };
 
 export default WeatherCard;
